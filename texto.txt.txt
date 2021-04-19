@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Dame el numero de alumnos que quieres ingresar"<<endl;
+    cin>>n;
+    int contador=0;
+    string nombres[n];
+    int edades[n];
+    int totalCalificaciones = n*5;
+    int calificaciones[totalCalificaciones];
+
+    for(int x =0;x<n;x++){
+            cout<<"Numero de vuelta del for "<<x<<endl;
+        cout<<"Dame el nombre de tu persona"<<endl;
+        cin>>nombres[x];
+        cout<<"Dame la edad de tu persona"<<endl;
+        cin>>edades[x];
+    }
+    for(int y =0;y<n;y++){
+       for(contador=0;contador<5;contador++){
+        cout<<"dame tu calificación de "<<nombres[y]<<"numero "<<y<<endl;
+        cin>>calificaciones[contador];
+       cout<<"El promedio final es :"<< calificaciones[contador] / 5 <<endl;
+       }
+    }
+
+    return 0;
+}
